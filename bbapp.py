@@ -1,13 +1,12 @@
-# inspired from tutorial by Anthony at https://prettyprinted.com/
 # inspiration from my 2015-2016 Primary 2 students who loved the Python 3 version of this app
-# Christopher Joseph Spiteri
+# Christopher Joseph Spiteri December 2016, Flask App - May 29 2017. 
 from flask import Flask, render_template
-#from flask import url_for, redirect
+from flask import url_for, redirect
 from random import randint
 
 
 
-app = Flask(__name__)   # double underscores are called DUNDERS
+app = Flask(__name__)   
 #routes
 
 #Hello World
@@ -17,7 +16,7 @@ def test():
 
 @app.route('/exercise')
 def exercise():
-    # constants and variables
+    # constants and variables   
     count = 5
     exset = []
     selection = []
@@ -41,7 +40,7 @@ def exercise():
         
     #exercise selection loop    
     while len (exset) != count:
-        x= randint(0,29)
+        x= randint(0,29)        #'choices' currenty set to 30, change values here to reflect total
         if x not in exset:
             exset.append(x)
         else: continue
@@ -51,5 +50,5 @@ def exercise():
 
 if __name__ == '__main__':
     # app.run(debug=True)
-    app.run(host ='0.0.0.0', port=8080,debug=True)
+    app.run(host ='0.0.0.0', port=8080,debug=False)
     
