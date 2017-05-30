@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- HTML based on https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_coming_soon&stacked=h -->
+<html>
+  
+    <head>
+    
+        <title>Study Break</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">        <!-- LINK TO W3CSS FILE -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> <!-- LINK TO GOOGLE FONT API -->
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/style.css">                          <!-- LINK TO LOCAL STYLE SHEET -->
+    
+    </head>
+
+    <body>
+        <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+         
+          <div class="w3-display-topleft w3-padding-large w3-xlarge">
+            Study Break V1.0<br>by Tapherj
+          </div>
+          
+          <div class="w3-display-middle">
+            <h3 class="w3-xlarge w3-animate-top">{% for exerc in exercises %} 
+            {{exerc}}<br><br>
+            {% endfor %}</h3>
+          </div>
+        
+        </div>
+    </body>    
+</html>
